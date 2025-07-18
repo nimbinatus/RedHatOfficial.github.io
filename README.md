@@ -6,7 +6,7 @@ We’ve put together a comprehensive list of the projects hosted on GitHub in wh
 
 To add or modify projects to the list on [https://redhatofficial.github.io](https://redhatofficial.github.io), either submit a pull request or create an issue in the [repo](https://github.com/RedHatOfficial/RedHatOfficial.github.io). Upon review, the site maintainers will merge the PR or change the content as requested. No direct merges will be accepted.
 
-All projects are stored in the `/app/data` directory in the `projects.json` file within the dev branch of this repo. Try to add your project alphabetically (just to make the file easier to search) and create a new object in the JSON that has:
+All projects are stored in the `/data` directory in the `projects.json` file within the dev branch of this repo. Try to add your project alphabetically (just to make the file easier to search) and create a new object in the JSON that has:
 
 ```js
 {
@@ -61,21 +61,25 @@ cd RedHatOfficial.github.io
 
 ## Building and running locally
 
-To build and run this project in your local dev environment, follow the instructions below. Be sure you have [Node.js](https://nodejs.org/) installed before you start.
+To build and run this project in your local dev environment, first install [Rust](https://www.rust-lang.org/tools/install) and [Zola](https://www.getzola.org/documentation/getting-started/installation/). Then, run
 
-1. Install dependencies: `npm install`
-2. Run the local development server: `npm start`
+```bash
+cd site
+zola serve
+```
 
-The web page will start running on [localhost:8080](http://localhost:8080/).
+Go to the URL for the webserver (likely `localhost:1111`) to explore the site.
 
 ## Built with
 
-This site was created using [Angular](https://angularjs.org/), [webpack](https://webpack.js.org/), [NPM](https://www.npmjs.com/), [Babel](https://babeljs.io/), [Sass](https://sass-lang.com/), and [Netlify](https://www.netlify.com/).
+This project is build and run using [Zola](https://www.getzola.org/), a Rust-based static site generator.
+
+Under the hood, Zola uses [Tera](https://keats.github.io/tera/) for templating.
 
 ## Licensing
 
 - [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/) for the displayed page and primary license for this repository
-- [MIT](https://opensource.org/licenses/MIT) for the JavaScript
+- [MIT](https://opensource.org/licenses/MIT) for the small bits of Javascript within the HTML files
 - [CC0](https://creativecommons.org/share-your-work/public-domain/cc0/) for the HTML and CSS
 
 Red Hat trademarks are not subject to the above license grants.
