@@ -38,11 +38,10 @@ jobs:
         if: github.event.action != 'closed'
         uses: shalzz/zola-deploy-action@v0.21.0
         env:
-          BUILD_DIR: .
-          BUILD_ONLY: true
           BUILD_FLAGS: --base-url https://nimbinatus.com/RedHatOfficial.github.io --drafts
           BUILD_THEMES: false
           CHECK_LINKS: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         id: preview-step
