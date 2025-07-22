@@ -16,7 +16,8 @@ All projects are stored in the `/data` directory in the `projects.json` file wit
   "projectWebsite": "http://foo.github.io",
   "category": "Development",
   "twitterHandle": "",
-  "twitterURL": ""
+  "twitterURL": "",
+  "lowercaseName": "foo project"
 }
 ```
 
