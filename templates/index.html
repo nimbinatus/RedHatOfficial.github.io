@@ -220,7 +220,9 @@
                     <div class="group-copy"><p>{{ elem.copy }}</p>
                         {% if elem.copy2 %}
                         <p>{{ elem.copy2 }}</p>
-                        {% endif %}</div>
+                        {% endif %}
+                    </div>
+                    {% if elem.cta %}
                     <p class="group-cta">
                         <a class="group-cta-anchor"
                                href="{{ elem.cta.href }}"
@@ -228,6 +230,7 @@
                             {{ elem.cta.text }}
                         </a>
                     </p>
+                    {% endif %}
                 </div>
             </div>
             {% endif %}
