@@ -283,6 +283,12 @@
         noDisplay = document.getElementById("no-results");
         noDisplay.style.display = "";
     }
+
+    if (resultCount != 0) {
+        let noDisplay;
+        noDisplay = document.getElementById("no-results");
+        noDisplay.style.display = "none";
+    }
 }
 function filterTable() {
     let input, filter, table, tr, td, i, txtValue;
