@@ -36,12 +36,15 @@ jobs:
         uses: actions/checkout@v4
       - name: Install and build
         if: github.event.action != 'closed'
-        run: shalzz/zola-deploy-action@v0.21.0
+        uses: shalzz/zola-deploy-action@v0.21.0
         env:
           BUILD_ONLY: true
-          BUILD_FLAGS: --base-url https://nimbinatus.com/RedHatOfficial.github.io--drafts
+          BUILD_FLAGS: --base-url https://nimbinatus.com/RedHatOfficial.github.io --drafts
           BUILD_THEMES: false
           CHECK_LINKS: true
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         id: preview-step
+        with:
+          deploy-repository: nimbinatus/RedHatOfficial.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
