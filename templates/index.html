@@ -177,7 +177,7 @@
                     </thead>
                     <tbody class="table-body">
                     {% set projects = load_data(path="data/projects.json") %}
-                    {% for project in projects | sort(attribute="projectName") %}
+                    {% for project in projects | sort(attribute="lowercaseName") %}
                     <tr class="table-row">
                         {% if project.projectRepository and project.projectName %}
                         <td><a href="{{ project.projectRepository }}">{{ project.projectName }}</a></td>
