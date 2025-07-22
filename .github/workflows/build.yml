@@ -39,9 +39,9 @@ jobs:
         run: shalzz/zola-deploy-action@v0.21.0
         env:
           BUILD_ONLY: true
-          BUILD_FLAGS: --drafts
+          BUILD_FLAGS: --base-url https://nimbinatus.com/RedHatOfficial.github.io--drafts
           BUILD_THEMES: false
           CHECK_LINKS: true
-      # - name: Deploy preview
-      #   uses: rossjrw/pr-preview-action@v1
-      #   id: preview-step
+      - name: Deploy preview
+        uses: rossjrw/pr-preview-action@v1
+        id: preview-step
