@@ -41,6 +41,6 @@ jobs:
           BUILD_FLAGS: --drafts
           BUILD_THEMES: false
           CHECK_LINKS: true
-      - name: Deploy preview
-        uses: rossjrw/pr-preview-action@v1
-        id: preview-step
+      # - name: Deploy preview
+      #   uses: rossjrw/pr-preview-action@v1
+      #   id: preview-step
