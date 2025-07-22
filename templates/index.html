@@ -9,7 +9,7 @@
     <meta name="description" content="{% block description %}{{ config.description }}{% endblock description %}">
     <title>{% block title %}{{ config.title }}{% endblock title %}</title>
     <link rel="icon" type="image/png" href="https://static.redhat.com/libs/redhat/brand-assets/2/corp/favicon.png" />
-    <link rel="stylesheet" type="text/css" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css"/>
+    <link rel="stylesheet" type="text/css" href="{{ get_url(path='css/normalize.css') }}"/>
     <link rel="stylesheet" type="text/css" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="{{ get_url(path='global.css') }}"/>
     <noscript>
