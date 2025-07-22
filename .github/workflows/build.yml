@@ -45,3 +45,6 @@ jobs:
       - name: Deploy preview
         uses: rossjrw/pr-preview-action@v1
         id: preview-step
+        with:
+          deploy-repository: nimbinatus/RedHatOfficial.github.io
+          token: ${{ secrets.GITHUB_TOKEN }}
