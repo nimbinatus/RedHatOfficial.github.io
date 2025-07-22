@@ -53,16 +53,38 @@ This list is just for Red Hat contributions to projects hosted on GitHub. See ht
 
 Open an issue in _this_ repo, and the owners of the RedHatOfficial organization will get in touch with you.
 
-## Quick start
+## Changing the Featured list
+
+To modify the featured projects, submit a pull request modifying the `/data/featured.json` file within the `dev` branch. You need to replace one of the featured projects rather than adding to the file.
+
+In addition, you need to replace the logo in the `static/img` directory. The naming convention is important; you must name the image file as `logo-<logo>.png`, with `logo` here referencing the value in the `featured.json` file entry. So, for example, given the following entry:
+
+```json
+{
+  "name": "CentOS Project",
+  "logo": "centos",
+  "github": "https://github.com/CentOS",
+  "twitter": "https://twitter.com/CentOSProject",
+  "website": "https://www.centos.org/",
+  "description": "A solid, predictable base to build upon, with extensive resources to build, test, release, and maintain code."
+}
+```
+The image would be `logo-centos.png`.
+
+Upon review, the site maintainers will merge the PR or change the content as requested. No direct merges will be accepted.
+
+## Contributing to the build
+
+### Quick start
 
 ```
 git clone https://github.com/RedHatOfficial/RedHatOfficial.github.io.git
 cd RedHatOfficial.github.io
 ```
 
-## Building and running locally
+### Building and running locally
 
-To build and run this project in your local dev environment, first install [Rust](https://www.rust-lang.org/tools/install) and [Zola](https://www.getzola.org/documentation/getting-started/installation/). Then, run
+To build and run this project in your local dev environment, first install [Zola](https://www.getzola.org/documentation/getting-started/installation/). Then, run
 
 ```bash
 cd site
