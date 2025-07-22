@@ -27,7 +27,7 @@ jobs:
         env:
           PAGES_BRANCH: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          BUILD_FLAGS: --base-url $DEPLOY_URL
+          BUILD_FLAGS: --base-url https://nimbinatus.com/RedHatOfficial.github.io
   preview:
     runs-on: ubuntu-latest
     if: github.ref != 'refs/heads/dev'
